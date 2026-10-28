@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d2a52">
+  <meta name="description" content="Lodge Forty-Five — Pittsburgh, Pennsylvania.">
+  <title>Lodge Forty-Five</title>
+
+  <style>
+    :root{
+      --ivory:#f6f2e8;
+      --ivory-dark:#e9e2d3;
+      --blue:#0d2a52;
+      --blue-deep:#071a35;
+      --red:#8f1f2d;
+      --gold:#b28a46;
+      --ink:#142033;
+    }
+
+    *{box-sizing:border-box}
+
+    html,body{
+      margin:0;
+      min-height:100%;
+    }
+
+    body{
+      min-height:100vh;
+      display:grid;
+      place-items:center;
+      overflow:hidden;
+      color:var(--ink);
+      background:
+        linear-gradient(rgba(246,242,232,.94),rgba(246,242,232,.97)),
+        repeating-linear-gradient(
+          90deg,
+          transparent 0,
+          transparent 42px,
+          rgba(13,42,82,.025) 43px
+        );
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    body::before,
+    body::after{
+      content:"";
+      position:fixed;
+      left:0;
+      width:100%;
+      height:8px;
+      background:var(--blue);
+    }
+
+    body::before{top:0}
+    body::after{bottom:0}
+
+    .page{
+      width:min(900px,92vw);
+      min-height:min(680px,88vh);
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:64px 36px;
+      position:relative;
+      border:1px solid rgba(13,42,82,.20);
+      background:rgba(246,242,232,.66);
+      box-shadow:0 22px 70px rgba(7,26,53,.08);
+    }
+
+    .page::before{
+      content:"";
+      position:absolute;
+      inset:12px;
+      border:1px solid rgba(178,138,70,.48);
+      pointer-events:none;
+    }
+
+    .watermark{
+      position:absolute;
+      top:50%;
+      left:50%;
+      width:min(640px,88%);
+      height:auto;
+      transform:translate(-50%,-50%);
+      color:#494640;
+      opacity:.075;
+      pointer-events:none;
+      user-select:none;
+      z-index:0;
+    }
+
+    .page > :not(.watermark){position:relative;z-index:1}
+    .page > footer{position:absolute}
+
+    .mark{
+      width:72px;
+      height:72px;
+      display:grid;
+      place-items:center;
+      margin-bottom:28px;
+      border:1px solid var(--gold);
+      transform:rotate(45deg);
+      color:var(--blue);
+      background:var(--ivory);
+    }
+
+    .mark span{
+      transform:rotate(-45deg);
+      font-size:22px;
+      letter-spacing:.08em;
+      font-weight:700;
+    }
+
+    .eyebrow{
+      margin:0 0 16px;
+      color:var(--red);
+      font-size:12px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight:700;
+      letter-spacing:.34em;
+      text-transform:uppercase;
+    }
+
+    h1{
+      margin:0;
+      color:var(--blue-deep);
+      font-size:clamp(46px,8vw,92px);
+      line-height:.92;
+      font-weight:500;
+      letter-spacing:-.035em;
+    }
+
+    .rule{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      width:min(390px,72%);
+      margin:30px auto 22px;
+    }
+
+    .rule::before,
+    .rule::after{
+      content:"";
+      height:1px;
+      flex:1;
+      background:var(--gold);
+    }
+
+    .rule span{
+      width:7px;
+      height:7px;
+      background:var(--red);
+      transform:rotate(45deg);
+    }
+
+    .location{
+      margin:0;
+      color:var(--blue);
+      font-size:14px;
+      letter-spacing:.19em;
+      text-transform:uppercase;
+    }
+
+    .message{
+      max-width:520px;
+      margin:64px auto 0;
+      color:#4d5662;
+      font-size:16px;
+      line-height:1.8;
+      letter-spacing:.04em;
+    }
+
+    .message strong{
+      display:block;
+      margin-top:12px;
+      color:var(--blue-deep);
+      font-weight:400;
+      font-style:italic;
+    }
+
+    footer{
+      position:absolute;
+      bottom:38px;
+      left:0;
+      width:100%;
+      color:#777269;
+      font-family:Arial, Helvetica, sans-serif;
+      font-size:10px;
+      letter-spacing:.22em;
+      text-transform:uppercase;
+    }
+
+    @media (max-width:600px){
+      .page{
+        min-height:90vh;
+        padding:54px 24px;
+      }
+      .message{margin-top:48px}
+      footer{bottom:28px}
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <svg class="watermark" viewBox="0 0 600 660" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="engraved-hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+          <path d="M0 0V7" fill="none" stroke="currentColor" stroke-width="1.7"/>
+        </pattern>
+      </defs>
+      <!-- The carpenter's square, with an open center and engraved shading. -->
+      <path d="M86 294 L300 508 L514 294 L540 320 L300 560 L60 320 Z"
+        fill="url(#engraved-hatch)" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M91 321 L300 530 L509 321" fill="none" stroke="currentColor" stroke-width="1"/>
+      <!-- Two tapered compass legs and their circular hinge; no letterform. -->
+      <path d="M283 118 L307 130 L151 475 L111 521 L128 461 Z"
+        fill="url(#engraved-hatch)" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M317 118 L293 130 L449 475 L489 521 L472 461 Z"
+        fill="url(#engraved-hatch)" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M290 69 H310 V105 H290 Z" fill="url(#engraved-hatch)" stroke="currentColor" stroke-width="3"/>
+      <circle cx="300" cy="121" r="28" fill="url(#engraved-hatch)" stroke="currentColor" stroke-width="3"/>
+      <circle cx="300" cy="121" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
+    </svg>
+    <div class="mark" aria-hidden="true"><span>45</span></div>
+
+    <p class="eyebrow">Free &amp; Accepted Masons</p>
+
+    <h1>Lodge<br>Forty-Five</h1>
+
+    <div class="rule" aria-hidden="true"><span></span></div>
+
+    <p class="location">Pittsburgh · Pennsylvania</p>
+
+    <div class="message">
+      A new digital presence is being prepared.
+      <strong>Further light forthcoming.</strong>
+    </div>
+
+    <footer>lodgefortyfive.org</footer>
+  </main>
+</body>
+</html>
