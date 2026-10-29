@@ -1,0 +1,46 @@
+name: Update Gallery
+
+on:
+  push:
+    paths:
+      - "photos/**"
+
+permissions:
+  contents: write
+
+jobs:
+  update-gallery:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build photo manifest
+        run: |
+          python3 - <<'PY'
+          import os
+          import json
+
+          folder = "photos"
+          extensions = {".jpg", ".jpeg", ".png", ".webp", ".gif"}
+
+          photos = sorted(
+              f for f in os.listdir(folder)
+              if os.path.isfile(os.path.join(folder, f))
+              and os.path.splitext(f)[1].lower() in extensions
+          )
+
+          with open(os.path.join(folder, "manifest.json"), "w") as f:
+              json.dump(photos, f, indent=2)
+
+          print(f"Added {len(photos)} photos to gallery.")
+          PY
+
+      - name: Commit updated manifest
+        run: |
+          git config user.name "Lodge 45 Gallery"
+          git config user.email "actions@github.com"
+          git add photos/manifest.json
+          git diff --cached --quiet || git commit -m "Update gallery"
+          git push
