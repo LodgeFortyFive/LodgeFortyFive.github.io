@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#07131f"><meta name="robots" content="noindex,nofollow">
+<title>Archive | Lodge No. 45</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;background:#07131f;color:#f7e8e0}body{font-family:Georgia,"Times New Roman",serif}.top{height:48px;padding:0 14px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.1)}.brand{font-size:12px;letter-spacing:.15em;text-transform:uppercase}.brand b{color:#789e9c;font-weight:400}.back{font:600 9px Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#789e9c;text-decoration:none}.gallery{column-count:5;column-gap:2px;line-height:0;padding:2px}.gallery img{width:100%;height:auto;display:block;margin:0 0 2px;break-inside:avoid;cursor:zoom-in;background:#0b1824}.empty{padding:20vh 20px;text-align:center;line-height:1.7;color:#789e9c;font:10px Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase}.viewer{position:fixed;inset:0;background:rgba(0,0,0,.94);display:none;align-items:center;justify-content:center;z-index:10;padding:18px}.viewer.open{display:flex}.viewer img{max-width:100%;max-height:100%;object-fit:contain}.viewer button{position:absolute;right:16px;top:12px;border:0;background:none;color:white;font-size:32px;cursor:pointer}@media(max-width:1000px){.gallery{column-count:4}}@media(max-width:720px){.gallery{column-count:3}}@media(max-width:460px){.gallery{column-count:2}}
+</style></head>
+<body>
+<header class="top"><div class="brand">Lodge <b>No. 45</b> · Archive</div><a class="back" href="index.html">Return</a></header>
+<main><div id="gallery" class="gallery"></div></main>
+<div id="viewer" class="viewer" aria-hidden="true"><button aria-label="Close">×</button><img alt=""></div>
+<script>
+/* GitHub Pages cannot discover a folder by itself. Keep photo filenames in photos/manifest.json.
+   Run update-gallery.py after dumping new images into /photos to rebuild that list automatically. */
+fetch('photos/manifest.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.json()}).then(files=>{
+ const g=document.getElementById('gallery');
+ files.forEach(file=>{const img=document.createElement('img');img.src='photos/'+encodeURIComponent(file).replace(/%2F/g,'/');img.alt='Lodge No. 45 archive photograph';img.loading='lazy';img.decoding='async';g.appendChild(img)});
+ if(!files.length) g.innerHTML='<div class="empty">No photographs in the archive yet.</div>';
+}).catch(()=>document.getElementById('gallery').innerHTML='<div class="empty">Add photographs to the photos folder, then run update-gallery.py.</div>');
+const v=document.getElementById('viewer'),vi=v.querySelector('img');document.getElementById('gallery').addEventListener('click',e=>{if(e.target.tagName==='IMG'){vi.src=e.target.src;v.classList.add('open');v.setAttribute('aria-hidden','false')}});function close(){v.classList.remove('open');vi.src='';v.setAttribute('aria-hidden','true')}v.addEventListener('click',e=>{if(e.target!==vi)close()});document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+</script></body></html>
