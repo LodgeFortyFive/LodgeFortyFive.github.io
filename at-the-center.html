@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="#07131f" name="theme-color"/>
+<meta content="Explore the lodges and appendant Masonic bodies meeting at the Greater Pittsburgh Masonic Center." name="description"/>
+<title>At the Center | Lodge No. 45 | Pittsburgh</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Grenze:opsz,wght@8..144,400;8..144,500;8..144,600;8..144,700&amp;family=Old+Standard+TT:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="favicon.png" rel="icon" type="image/png"/>
+<style>
+    :root{--night:#07131f;--midnight:#12233e;--tide:#789e9c;--brick:#a02f21;--parchment:#f7e8e0;--gold:#c6a66a;--ink:#17252b}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;color:var(--parchment);background:#07131f;font:20px/1.8 'Old Standard TT',Georgia,serif}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit}
+    .shell{width:min(1050px,88vw);margin:0 auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(7,19,31,.91);backdrop-filter:blur(14px);border-bottom:1px solid rgba(198,166,106,.22)}
+    nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:12px;font:600 24px 'Grenze',Georgia,serif;letter-spacing:.1em;text-transform:uppercase}
+    .brand img{display:block;width:34px;height:34px;object-fit:contain}
+    .brand span span{color:var(--tide)}
+    .back-link{display:inline-flex;align-items:center;gap:12px;color:#d4dddd;font:700 15px 'Old Standard TT',Georgia,serif;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap}
+    .back-link:hover,.back-link:focus-visible{color:var(--gold)}
+    .back-link .arrow{font:22px Georgia,serif;transition:transform .2s}
+    .back-link:hover .arrow{transform:translateX(-4px)}
+    .intro{position:relative;isolation:isolate;overflow:hidden;padding:135px 0 115px;background:radial-gradient(circle at 80% 23%,rgba(120,158,156,.15),transparent 38%),linear-gradient(160deg,#07131f,#13283a 75%,#19323d)}
+    .intro:before{content:"";position:absolute;width:480px;height:480px;right:-270px;top:32px;border:1px solid rgba(198,166,106,.16);transform:rotate(45deg);box-shadow:0 0 0 40px rgba(198,166,106,.025),0 0 0 85px rgba(198,166,106,.012);z-index:-1}
+    .eyebrow{color:#d19870;font:700 13px 'Old Standard TT',Georgia,serif;text-transform:uppercase;letter-spacing:.3em;margin:0 0 20px}
+    h1,h2,h3{font-family:'Grenze',Georgia,serif;font-weight:600}
+    h1{font-size:clamp(70px,10vw,128px);line-height:.85;letter-spacing:-.035em;margin:0 0 34px;max-width:850px}
+    .intro .lede{max-width:710px;color:#d3dedd;font-size:22px;line-height:1.85;margin:0}
+    .rule{width:200px;height:1px;background:linear-gradient(90deg,var(--gold),transparent);margin:42px 0 0}
+    .section{padding:105px 0;border-top:1px solid rgba(198,166,106,.15)}
+    .section--lodges{background:#0f1d2a}
+    .section--bodies{background:#e2ded2;color:var(--ink)}
+    .section-header{max-width:760px;margin-bottom:42px}
+    .section-label{margin:0 0 15px;color:#ba8067;font:700 13px 'Old Standard TT',Georgia,serif;letter-spacing:.25em;text-transform:uppercase}
+    .section--bodies .section-label{color:#92392d}
+    h2{font-size:clamp(46px,6vw,74px);line-height:1;margin:0 0 18px}
+    .section-note{color:#b7c5c3;line-height:1.8;margin:0;font-size:20px;max-width:660px}
+    .section--bodies .section-note{color:#43565a}
+    .directory-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+    .directory-entry{min-height:260px;display:flex;flex-direction:column;justify-content:flex-start;align-items:flex-start;padding:36px;border:1px solid rgba(198,166,106,.32);background:linear-gradient(155deg,rgba(198,166,106,.055),rgba(255,255,255,.012));position:relative}
+    .directory-entry:before{content:"";position:absolute;top:0;left:0;bottom:0;width:2px;background:var(--gold)}
+    .directory-entry h3{font-size:34px;line-height:1.15;margin:0 0 14px}
+    .directory-entry p{color:#acbdbc;font-size:19px;line-height:1.8;margin:0;max-width:40ch}
+    .section--bodies .directory-entry{border-color:rgba(18,35,62,.25);background:rgba(255,255,255,.19)}
+    .section--bodies .directory-entry p{color:#44595c}
+    .directory-entry{display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:0;min-height:300px}
+    .directory-entry h3{margin-bottom:13px}
+    .directory-entry p{margin:0 0 14px}
+    .directory-schedule{margin-top:auto!important;padding-top:11px;border-top:1px solid rgba(198,166,106,.25);width:100%;font-size:16px!important;line-height:1.5!important}
+    .directory-schedule strong{display:block;font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+    .section--bodies .directory-schedule strong{color:#8d4534}
+    .directory-link{display:inline-block;margin-top:auto;padding-top:10px;font:700 15px/1.5 'Old Standard TT',Georgia,serif;letter-spacing:.065em;color:var(--gold);text-decoration:underline;text-underline-offset:5px}
+    .directory-link:hover,.directory-link:focus-visible{color:var(--parchment)}
+    .section--bodies .directory-link{color:#6a382b}
+    .section--bodies .directory-link:hover{color:#17252b}
+    .directory-source{font-size:15px;max-width:75ch;line-height:1.65;color:#b7c5c3;margin:28px 0 0}
+    .directory-source a{text-decoration:underline;text-underline-offset:3px;color:var(--gold)}
+    .section--bodies .directory-source{color:#3d5355}
+    .section--bodies .directory-source a{color:#793f30}
+    .editorial-mark{font:700 13px 'Old Standard TT',Georgia,serif;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:17px}
+    .section--bodies .editorial-mark{color:#8d4534}
+    .closing{padding:90px 0;background:#152b36;text-align:center}
+    .closing p{margin:0 auto 24px;max-width:680px;color:#c6d1ce}
+    .closing a{display:inline-block;border-bottom:1px solid var(--gold);padding-bottom:5px;color:#f1ddae;font-size:19px}
+    footer{background:#f7e8e0;color:#12233e;border-top:1px solid rgba(18,35,62,.15);padding:36px 0;text-align:center}
+    .footnote{font-size:14px;letter-spacing:.1em;line-height:1.7}
+    body.large-type{font-size:24px}
+    body.large-type .section-note,body.large-type .directory-entry p,body.large-type .intro .lede{font-size:25px}
+    .accessibility{display:flex;align-items:center;gap:6px}
+    .type-btn{border:1px solid rgba(120,158,156,.3);background:transparent;color:#d4dddd;cursor:pointer;border-radius:999px;padding:4px 13px;font:700 16px 'Old Standard TT',Georgia,serif;min-height:38px}
+    .type-btn.active{background:rgba(198,166,106,.18);color:#fff4cf;border-color:var(--gold)}
+    .nav-tools{display:flex;align-items:center;gap:28px}
+    @media(max-width:730px){
+      nav{min-height:76px}.brand{font-size:20px}.brand img{width:30px;height:30px}
+      .nav-tools{gap:13px}.back-link{font-size:13px;letter-spacing:.06em}
+      .intro{padding:90px 0 82px}.intro:before{right:-370px}.intro .lede{font-size:19px}
+      .section{padding:75px 0}.directory-grid{grid-template-columns:1fr}.directory-entry{min-height:220px;padding:29px}
+      h1{font-size:clamp(62px,14vw,96px)}
+      .accessibility{display:none}
+      .footnote{font-size:12px}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+  
+    /* Center directory: accurately sourced emblems, with numbered plates when no lodge mark was found. */
+    .directory-art{position:relative;display:grid;place-items:center;width:100%;height:158px;margin:3px 0 24px;
+      padding:14px;overflow:hidden;border:1px solid rgba(198,166,106,.25);
+      background:linear-gradient(130deg,#fbfaf7,#e9e7e0)}
+    .directory-art:before{content:"";position:absolute;inset:8px;border:1px solid rgba(18,35,62,.10);pointer-events:none}
+    .directory-art img{display:block;width:auto;height:auto;max-height:124px;max-width:min(100%,280px);
+      object-fit:contain;mix-blend-mode:multiply;filter:contrast(1.03)}
+    .directory-art--wide img{max-width:min(100%,360px);max-height:116px}
+    .directory-art-fallback{display:none;text-align:center;font:600 25px/1.3 'Grenze',Georgia,serif;color:#243f4e}
+    .directory-art.is-missing .directory-art-fallback{display:block}
+    .directory-art--number{display:flex;flex-direction:column;justify-content:center;gap:5px;
+      background:radial-gradient(circle at 50% 40%,rgba(198,166,106,.14),transparent 60%),#15283a;
+      border-color:rgba(198,166,106,.44);color:var(--gold)}
+    .directory-art--number:before{border-color:rgba(198,166,106,.20)}
+    .directory-art-numeral{font:600 75px/.95 'Grenze',Georgia,serif;letter-spacing:.08em}
+    .directory-art-caption{font:700 12px/1.4 'Old Standard TT',Georgia,serif;letter-spacing:.24em;color:#b6c9c9}
+    .directory-entry .editorial-mark{margin-bottom:14px}
+    .directory-entry h3{margin-top:0}
+    .section--bodies .directory-art{border-color:rgba(18,35,62,.20)}
+    @media(max-width:730px){.directory-art{height:143px;margin-bottom:21px}.directory-art img{max-height:111px}}
+    @media(prefers-reduced-motion:no-preference){.directory-art img{transition:transform .28s ease}.directory-entry:hover .directory-art img{transform:scale(1.035)}}
+</style>
+</head>
+<body>
+<header>
+<nav aria-label="Main navigation" class="shell">
+<a aria-label="Lodge No. 45 home" class="brand" href="index.html">
+<img alt="" aria-hidden="true" src="favicon.png"/><span>Lodge <span>No. 45</span></span>
+</a>
+<div class="nav-tools">
+<div aria-label="Text size" class="accessibility" role="group">
+<button aria-pressed="true" class="type-btn active" data-size="normal" type="button">A</button>
+<button aria-pressed="false" class="type-btn" data-size="large" type="button">A+</button>
+</div>
+<a class="back-link" href="index.html#contact"><span aria-hidden="true" class="arrow">←</span> Lodge No. 45</a>
+</div>
+</nav>
+</header>
+<main>
+<section aria-labelledby="page-title" class="intro">
+<div class="shell">
+<p class="eyebrow">Greater Pittsburgh Masonic Center</p>
+<h1 id="page-title">Under One Roof.</h1>
+<p class="lede">The Greater Pittsburgh Masonic Center serves as a meeting place for lodges and other bodies of the Masonic fraternity. Here are the other Masonic lodges and bodies listed as meeting at the Center, each following its own traditions and work.</p>
+<div aria-hidden="true" class="rule"></div>
+</div>
+</section>
+<section aria-labelledby="lodges-title" class="section section--lodges">
+<div class="shell">
+<div class="section-header">
+<p class="section-label">Craft Masonry</p>
+<h2 id="lodges-title">Lodges of the Center.</h2>
+<p class="section-note">Five Craft lodges share the Center with Lodge No. 45. Each retains its own warrant, history, and meetings.</p>
+</div>
+<div class="directory-grid">
+<article class="directory-entry">
+<div class="editorial-mark">Blue Lodge · No. 221</div><div class="directory-art directory-art--number"><span class="directory-art-numeral">221</span><span class="directory-art-caption">CRAFT LODGE</span></div>
+<h3>Franklin/St. John's/Trinity Lodge No. 221</h3>
+<p>A lodge formed through the consolidation of several historic lodges, continuing the work of Craft Masonry and community involvement.</p>
+<p class="directory-schedule"><strong>Stated meeting</strong> Third Thursday of each month</p>
+<a class="directory-link" href="https://www.pghmasoniccenter.com/freemasonry/#masonic-bodies" rel="noopener noreferrer" target="_blank">GPMC listing <span aria-hidden="true">↗</span></a>
+</article>
+<article class="directory-entry">
+<div class="editorial-mark">Blue Lodge · No. 231</div><div class="directory-art directory-art--number"><span class="directory-art-numeral">231</span><span class="directory-art-caption">CRAFT LODGE</span></div>
+<h3>Dallas Lodge No. 231</h3>
+<p>Founded as Dallas Lodge No. 508 in 1872; joined with Solomon Lodge No. 231 in 2005. The lodge emphasizes charity and fraternity.</p>
+<p class="directory-schedule"><strong>Stated meeting</strong> Third Thursday of each month</p>
+<a class="directory-link" href="https://dallaslodge231.wordpress.com/" rel="noopener noreferrer" target="_blank">Organization website <span aria-hidden="true">↗</span></a>
+</article>
+<article class="directory-entry">
+<div class="editorial-mark">Blue Lodge · No. 573</div><div class="directory-art"><img alt="Corinthian Lodge No. 573 emblem" decoding="async" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('is-missing')" src="https://www.pghmasoniccenter.com/wp-content/uploads/2025/04/327191277_950147249484116_2174599911169347719_n.jpg"/><span class="directory-art-fallback">573</span></div>
+<h3>Corinthian Lodge No. 573</h3>
+<p>A Craft lodge devoted to Masonic fellowship, personal development, and service to the community.</p>
+<p class="directory-schedule"><strong>Stated meeting</strong> Second Friday of each month</p>
+<a class="directory-link" href="https://www.facebook.com/profile.php?id=61557165462980" rel="noopener noreferrer" target="_blank">Organization website <span aria-hidden="true">↗</span></a>
+</article>
+<article class="directory-entry">
+<div class="editorial-mark">Blue Lodge · No. 725</div><div class="directory-art"><img alt="Chartiers Valley Lodge No. 725 emblem" decoding="async" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('is-missing')" src="https://www.pghmasoniccenter.com/wp-content/uploads/2025/04/Chartiers-Valley-Lodge-No.-725.jpg"/><span class="directory-art-fallback">725</span></div>
+<h3>Chartiers Valley Lodge No. 725</h3>
+<p>A local lodge with a century-long history and an ongoing commitment to charitable activity.</p>
+<p class="directory-schedule"><strong>Stated meeting</strong> Third Tuesday of each month</p>
+<a class="directory-link" href="https://www.facebook.com/lodge725/" rel="noopener noreferrer" target="_blank">Organization website <span aria-hidden="true">↗</span></a>
+</article>
+<article class="directory-entry">
+<div class="editorial-mark">Blue Lodge · No. 796</div><div class="directory-art directory-art--wide"><img alt="Perry-Ionic Lodge No. 796 header artwork" decoding="async" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('is-missing')" src="https://perryionic.org/wp-content/uploads/2026/04/Lodge-Header.jpeg"/><span class="directory-art-fallback">796</span></div>
+<h3>Perry-Ionic Lodge No. 796</h3>
+<p>Formed in 1983 by the union of Ionic Lodge No. 525 and Perry Lodge No. 796, carrying forward the traditions of both lodges.</p>
+<p class="directory-schedule"><strong>Stated meeting</strong> Second Wednesday of each month</p>
+<a class="directory-link" href="https://perryionic.org/" rel="noopener noreferrer" target="_blank">Organization website <span aria-hidden="true">↗</span></a>
+</article>
+</div>
+<p class="directory-source">Meeting schedules and organization names are based on the <a href="https://www.pghmasoniccenter.com/freemasonry/#masonic-bodies" rel="noopener noreferrer" target="_blank">Greater Pittsburgh Masonic Center's published directory</a>. Confirm dates directly with the organization before attending.</p>
+</div>
+</section>
+<section aria-labelledby="bodies-title" class="section section--bodies">
+<div class="shell">
+<div class="section-header">
+<p class="section-label">Further Light</p>
+<h2 id="bodies-title">Appendant Bodies.</h2>
+<p class="section-note">Additional orders offering further Masonic study, ceremony, and fellowship.</p>
+</div>
+<div class="directory-grid">
+<article class="directory-entry">
+<div class="editorial-mark">Scottish Rite</div><div class="directory-art"><img alt="Scottish Rite Northern Masonic Jurisdiction double-headed eagle" decoding="async" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('is-missing')" src="https://www.pghmasoniccenter.com/wp-content/uploads/2025/04/SRNMJ_Eagle_Small_Color.png"/><span class="directory-art-fallback">Scottish Rite</span></div>
+<h3>Ancient &amp; Accepted Scottish Rite · Valley of Pittsburgh</h3>
+<p>An avenue for Master Masons to explore Masonic philosophy, symbolism, and further degrees through the Valley of Pittsburgh.</p>
+<a class="directory-link" href="https://valleyofpittsburgh.org/" rel="noopener noreferrer" target="_blank">Organization website <span aria-hidden="true">↗</span></a>
+</article>
+<article class="directory-entry">
+<div class="editorial-mark">Grotto</div><div class="directory-art"><img alt="Islam Grotto emblem" decoding="async" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('is-missing')" src="https://www.pghmasoniccenter.com/wp-content/uploads/2025/04/Islam-Grotto-M.O.V.P.E.R.png"/><span class="directory-art-fallback">Grotto</span></div>
+<h3>Islam Grotto M.O.V.P.E.R.</h3>
+<p>A Master Mason fellowship organization, known for social gatherings, good fellowship, and charitable interests.</p>
+<a class="directory-link" href="https://www.pittsburghgrotto.com/" rel="noopener noreferrer" target="_blank">Organization website <span aria-hidden="true">↗</span></a>
+</article>
+<article class="directory-entry">
+<div class="editorial-mark">York Rite · Cryptic Council</div><div class="directory-art"><img alt="Mt. Moriah Council No. 2 emblem" decoding="async" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('is-missing')" src="https://www.pghmasoniccenter.com/wp-content/uploads/2026/10/mt-moriah-council-logo2.png"/><span class="directory-art-fallback">Council No. 2</span></div>
+<h3>Mt. Moriah Council No. 2</h3>
+<p>A Council of Royal and Select Masters, working within the York Rite traditions and teachings.</p>
+<p class="directory-schedule"><strong>Stated meeting</strong> Second Monday of each month · 7:30 p.m.</p>
+<a class="directory-link" href="https://pagrandcouncil.org/" rel="noopener noreferrer" target="_blank">Organization website <span aria-hidden="true">↗</span></a>
+</article>
+<article class="directory-entry">
+<div class="editorial-mark">York Rite · Knights Templar</div><div class="directory-art"><img alt="Knights Templar emblem displayed for Pittsburgh Commandery No. 1 by GPMC" decoding="async" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('is-missing')" src="https://www.pghmasoniccenter.com/wp-content/uploads/2025/04/KT002-297x300-1.jpg"/><span class="directory-art-fallback">Commandery No. 1</span></div>
+<h3>Pittsburgh Commandery No. 1</h3>
+<p>A Knights Templar Commandery dedicated to its Masonic ideals and the support of charitable and educational causes.</p>
+<a class="directory-link" href="https://pagrandcommandery.org/" rel="noopener noreferrer" target="_blank">Organization website <span aria-hidden="true">↗</span></a>
+</article>
+<article class="directory-entry">
+<div class="editorial-mark">York Rite · Royal Arch Chapter</div><div class="directory-art"><img alt="Zerrubabel-Duquesne Royal Arch Chapter No. 162 emblem" decoding="async" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('is-missing')" src="https://www.pghmasoniccenter.com/wp-content/uploads/2025/04/Zerrubabel-Duquesne-Royal-Arch-Chapter-No.-162.jpg"/><span class="directory-art-fallback">Chapter No. 162</span></div>
+<h3>Zerrubabel-Duquesne Royal Arch Chapter No. 162</h3>
+<p>A Royal Arch Chapter offering the degrees and teachings of Capitular Masonry.</p>
+<p class="directory-schedule"><strong>Stated meeting</strong> First Tuesday of each month</p>
+<a class="directory-link" href="https://www.pghmasoniccenter.com/freemasonry/#masonic-bodies" rel="noopener noreferrer" target="_blank">GPMC listing <span aria-hidden="true">↗</span></a>
+</article>
+</div>
+<p class="directory-source">Organizations are listed as presented by the <a href="https://www.pghmasoniccenter.com/freemasonry/#masonic-bodies" rel="noopener noreferrer" target="_blank">Greater Pittsburgh Masonic Center</a>. Emblems are shown as published by the Center; the Perry-Ionic artwork comes from its own website. Lodges without a distinct emblem use a numbered plate instead.</p>
+</div>
+</section>
+<section class="closing">
+<div class="shell"><p>Return to the lodge whose address first led you here.</p><a href="index.html">Return to Lodge No. 45</a></div>
+</section>
+</main>
+<footer><div class="shell footnote">Lodge No. 45 · Greater Pittsburgh Masonic Center · Pittsburgh, Pennsylvania</div></footer>
+<script>
+    (function(){
+      const key='lodge45TextSize';
+      const buttons=document.querySelectorAll('.type-btn');
+      function update(size){
+        const large=size==='large';
+        document.body.classList.toggle('large-type',large);
+        buttons.forEach(function(button){
+          const on=button.dataset.size===size;
+          button.classList.toggle('active',on);
+          button.setAttribute('aria-pressed',on?'true':'false');
+        });
+      }
+      try{update(localStorage.getItem(key)==='large'?'large':'normal')}catch(e){update('normal')}
+      buttons.forEach(function(button){button.addEventListener('click',function(){
+        const size=this.dataset.size;
+        try{localStorage.setItem(key,size)}catch(e){}
+        update(size);
+      })});
+    })();
+  </script>
+</body>
+</html>
